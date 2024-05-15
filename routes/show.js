@@ -12,7 +12,7 @@ router.get('/:uuid',async (req,res)=>{
                fileName: file.filename,
                uuid:file.uuid,
                fileSize:file.size,
-               downloadLink:`${APP_BASE_URL}/files/download/${file.uuid}`,
+               downloadLink:`https://inshare.buzzworld360.com/files/download/${file.uuid}`,
           });
      } catch (error) {
           return res.render('download',{error:"something went wrong."});
