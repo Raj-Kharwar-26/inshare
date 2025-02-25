@@ -15,10 +15,10 @@ const emailForm = document.querySelector("#emailForm");
 
 const toast = document.querySelector(".toast");
 
-const baseURL = "https://inshare.buzzworld360.com";
+// const baseURL = "https://inshare.buzzworld360.com";
 // const uploadURL = `${baseURL}/api/files`;
 // const emailURL = `${baseURL}/api/files/send`;
-// const baseURL = "http://localhost:3000";
+const baseURL = "http://localhost:3000";
 const uploadURL = `${baseURL}/api/files`;
 const emailURL = `${baseURL}/api/files/send`;
 

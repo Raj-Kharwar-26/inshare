@@ -50,7 +50,7 @@ router.post('/',(req,res)=>{
                size: req.file.size,
           })
           const response = await file.save();
-          return res.json({file:`https://inshare.buzzworld360.com/files/${response.uuid}`});
+          return res.json({file:`https://localhost:3000/files/${response.uuid}`});
           // http://localhost:3000/files/23463hjsdgfgj-23dfgfsd
      })
      // Response -> link
@@ -84,7 +84,7 @@ router.post('/send',async(req,res)=>{
           text:`${emailFrom} shared a file with you.`,
           html: require('../services/emailTemplate')({
                emailFrom:emailFrom, 
-               downloadLink: `https://inshare.buzzworld360.com/files/${file.uuid}`, 
+               downloadLink: `https://localhost:3000/files/${file.uuid}`, 
                size:parseInt(file.size/1000)+' kb', 
                expires:' 24hours',
           }),
